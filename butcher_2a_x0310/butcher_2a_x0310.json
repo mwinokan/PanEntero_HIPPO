@@ -1,0 +1,634 @@
+{
+  "_fragment_atomgroup": "butcher_2a_x0310/_fragment_atomgroup.pdb",
+  "_protein": "butcher_2a_x0310/protein.pdb",
+  "_fragment_mesh": null,
+  "_protein_hull": {
+    "name": "protein hull",
+    "geometry": "butcher_2a_x0310/_protein_hull.ply",
+    "material": {
+      "absorption_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "absorption_distance": 1.0,
+      "albedo_img": null,
+      "anisotropy_img": null,
+      "ao_img": null,
+      "ao_rough_metal_img": null,
+      "aspect_ratio": 0.0,
+      "base_anisotropy": 0.0,
+      "base_clearcoat": 0.0,
+      "base_clearcoat_roughness": 0.0,
+      "base_color": [
+        0.8392156958580017,
+        0.15294118225574493,
+        0.1568627506494522,
+        1.0
+      ],
+      "base_metallic": 0.0,
+      "base_reflectance": 0.5,
+      "base_roughness": 1.0,
+      "clearcoat_img": null,
+      "clearcoat_roughness_img": null,
+      "emissive_color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "generic_imgs": {},
+      "generic_params": {},
+      "gradient": null,
+      "ground_plane_axis": 0.0,
+      "has_alpha": false,
+      "line_width": 1.0,
+      "metallic_img": null,
+      "normal_img": null,
+      "point_size": 3.0,
+      "reflectance_img": null,
+      "roughness_img": null,
+      "sRGB_color": false,
+      "scalar_max": 1.0,
+      "scalar_min": 0.0,
+      "shader": "defaultLit",
+      "thickness": 1.0,
+      "transmission": 1.0
+    }
+  },
+  "_protein_mesh": {
+    "name": "protein",
+    "geometry": "butcher_2a_x0310/_protein_mesh.ply",
+    "material": {
+      "absorption_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "absorption_distance": 1.0,
+      "albedo_img": null,
+      "anisotropy_img": null,
+      "ao_img": null,
+      "ao_rough_metal_img": null,
+      "aspect_ratio": 0.0,
+      "base_anisotropy": 0.0,
+      "base_clearcoat": 0.0,
+      "base_clearcoat_roughness": 0.0,
+      "base_color": [
+        0.8392156958580017,
+        0.15294118225574493,
+        0.1568627506494522,
+        1.0
+      ],
+      "base_metallic": 0.0,
+      "base_reflectance": 0.5,
+      "base_roughness": 1.0,
+      "clearcoat_img": null,
+      "clearcoat_roughness_img": null,
+      "emissive_color": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "generic_imgs": {},
+      "generic_params": {},
+      "gradient": null,
+      "ground_plane_axis": 0.0,
+      "has_alpha": false,
+      "line_width": 1.0,
+      "metallic_img": null,
+      "normal_img": null,
+      "point_size": 3.0,
+      "reflectance_img": null,
+      "roughness_img": null,
+      "sRGB_color": false,
+      "scalar_max": 1.0,
+      "scalar_min": 0.0,
+      "shader": "defaultLit",
+      "thickness": 1.0,
+      "transmission": 1.0
+    }
+  },
+  "_pocket_definitions": {
+    "P1": {
+      "type": "sphere",
+      "atoms": [
+        "GLY 127 O",
+        "PRO 107 CG",
+        "CYS 110 SG"
+      ],
+      "radius": "mean"
+    },
+    "P2": {
+      "type": "sphere",
+      "atoms": [
+        "VAL 84 CG1",
+        "TYR 90 CD2",
+        "SER 87 CB"
+      ],
+      "radius": "mean"
+    },
+    "P1'": {
+      "type": "sphere",
+      "atoms": [
+        "GLU 88 CB",
+        "PRO 107 CB",
+        "HIS 21 CD2"
+      ],
+      "radius": "mean"
+    },
+    "P2'": {
+      "type": "sphere",
+      "atoms": [
+        "PRO 107 CB",
+        "LEU 22 CD1"
+      ],
+      "shift": [
+        0,
+        0,
+        0
+      ],
+      "radius": "mean"
+    },
+    "P3": {
+      "type": "sphere",
+      "atoms": [
+        "GLY 127 O",
+        "GLU 85 CB"
+      ],
+      "radius": 4
+    },
+    "P4": {
+      "type": "sphere",
+      "atoms": [
+        "LEU 98 CD2"
+      ],
+      "radius": 5
+    },
+    "P5": {
+      "type": "sphere",
+      "atoms": [
+        "ASN 129 ND2",
+        "ASN 129 ND2",
+        "ILE 82 CG2"
+      ],
+      "radius": 4
+    },
+    "P6": {
+      "type": "sphere",
+      "atoms": [
+        "ILE 82 CG2"
+      ],
+      "shift": [
+        -1,
+        0,
+        1
+      ],
+      "radius": 4
+    }
+  },
+  "_pockets": {
+    "P1": {
+      "name": "P1",
+      "geometry": "butcher_2a_x0310/pocket_P1.ply",
+      "material": {
+        "absorption_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "absorption_distance": 1.0,
+        "albedo_img": null,
+        "anisotropy_img": null,
+        "ao_img": null,
+        "ao_rough_metal_img": null,
+        "aspect_ratio": 0.0,
+        "base_anisotropy": 0.0,
+        "base_clearcoat": 0.0,
+        "base_clearcoat_roughness": 0.0,
+        "base_color": [
+          0.1725490242242813,
+          0.6274510025978088,
+          0.1725490242242813,
+          0.699999988079071
+        ],
+        "base_metallic": 0.0,
+        "base_reflectance": 0.5,
+        "base_roughness": 1.0,
+        "clearcoat_img": null,
+        "clearcoat_roughness_img": null,
+        "emissive_color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "generic_imgs": {},
+        "generic_params": {},
+        "gradient": null,
+        "ground_plane_axis": 0.0,
+        "has_alpha": true,
+        "line_width": 1.0,
+        "metallic_img": null,
+        "normal_img": null,
+        "point_size": 3.0,
+        "reflectance_img": null,
+        "roughness_img": null,
+        "sRGB_color": false,
+        "scalar_max": 1.0,
+        "scalar_min": 0.0,
+        "shader": "defaultLitTransparency",
+        "thickness": 1.0,
+        "transmission": 1.0
+      },
+      "radius": 4.4302345571455914
+    },
+    "P2": {
+      "name": "P2",
+      "geometry": "butcher_2a_x0310/pocket_P2.ply",
+      "material": {
+        "absorption_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "absorption_distance": 1.0,
+        "albedo_img": null,
+        "anisotropy_img": null,
+        "ao_img": null,
+        "ao_rough_metal_img": null,
+        "aspect_ratio": 0.0,
+        "base_anisotropy": 0.0,
+        "base_clearcoat": 0.0,
+        "base_clearcoat_roughness": 0.0,
+        "base_color": [
+          0.5803921818733215,
+          0.40392157435417175,
+          0.7411764860153198,
+          0.699999988079071
+        ],
+        "base_metallic": 0.0,
+        "base_reflectance": 0.5,
+        "base_roughness": 1.0,
+        "clearcoat_img": null,
+        "clearcoat_roughness_img": null,
+        "emissive_color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "generic_imgs": {},
+        "generic_params": {},
+        "gradient": null,
+        "ground_plane_axis": 0.0,
+        "has_alpha": true,
+        "line_width": 1.0,
+        "metallic_img": null,
+        "normal_img": null,
+        "point_size": 3.0,
+        "reflectance_img": null,
+        "roughness_img": null,
+        "sRGB_color": false,
+        "scalar_max": 1.0,
+        "scalar_min": 0.0,
+        "shader": "defaultLitTransparency",
+        "thickness": 1.0,
+        "transmission": 1.0
+      },
+      "radius": 3.5845316797702886
+    },
+    "P1'": {
+      "name": "P1'",
+      "geometry": "butcher_2a_x0310/pocket_P1'.ply",
+      "material": {
+        "absorption_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "absorption_distance": 1.0,
+        "albedo_img": null,
+        "anisotropy_img": null,
+        "ao_img": null,
+        "ao_rough_metal_img": null,
+        "aspect_ratio": 0.0,
+        "base_anisotropy": 0.0,
+        "base_clearcoat": 0.0,
+        "base_clearcoat_roughness": 0.0,
+        "base_color": [
+          0.5490196347236633,
+          0.33725491166114807,
+          0.29411765933036804,
+          0.699999988079071
+        ],
+        "base_metallic": 0.0,
+        "base_reflectance": 0.5,
+        "base_roughness": 1.0,
+        "clearcoat_img": null,
+        "clearcoat_roughness_img": null,
+        "emissive_color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "generic_imgs": {},
+        "generic_params": {},
+        "gradient": null,
+        "ground_plane_axis": 0.0,
+        "has_alpha": true,
+        "line_width": 1.0,
+        "metallic_img": null,
+        "normal_img": null,
+        "point_size": 3.0,
+        "reflectance_img": null,
+        "roughness_img": null,
+        "sRGB_color": false,
+        "scalar_max": 1.0,
+        "scalar_min": 0.0,
+        "shader": "defaultLitTransparency",
+        "thickness": 1.0,
+        "transmission": 1.0
+      },
+      "radius": 4.110832590304228
+    },
+    "P2'": {
+      "name": "P2'",
+      "geometry": "butcher_2a_x0310/pocket_P2'.ply",
+      "material": {
+        "absorption_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "absorption_distance": 1.0,
+        "albedo_img": null,
+        "anisotropy_img": null,
+        "ao_img": null,
+        "ao_rough_metal_img": null,
+        "aspect_ratio": 0.0,
+        "base_anisotropy": 0.0,
+        "base_clearcoat": 0.0,
+        "base_clearcoat_roughness": 0.0,
+        "base_color": [
+          0.8901960849761963,
+          0.46666666865348816,
+          0.7607843279838562,
+          0.699999988079071
+        ],
+        "base_metallic": 0.0,
+        "base_reflectance": 0.5,
+        "base_roughness": 1.0,
+        "clearcoat_img": null,
+        "clearcoat_roughness_img": null,
+        "emissive_color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "generic_imgs": {},
+        "generic_params": {},
+        "gradient": null,
+        "ground_plane_axis": 0.0,
+        "has_alpha": true,
+        "line_width": 1.0,
+        "metallic_img": null,
+        "normal_img": null,
+        "point_size": 3.0,
+        "reflectance_img": null,
+        "roughness_img": null,
+        "sRGB_color": false,
+        "scalar_max": 1.0,
+        "scalar_min": 0.0,
+        "shader": "defaultLitTransparency",
+        "thickness": 1.0,
+        "transmission": 1.0
+      },
+      "radius": 4.1246052235335195
+    },
+    "P3": {
+      "name": "P3",
+      "geometry": "butcher_2a_x0310/pocket_P3.ply",
+      "material": {
+        "absorption_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "absorption_distance": 1.0,
+        "albedo_img": null,
+        "anisotropy_img": null,
+        "ao_img": null,
+        "ao_rough_metal_img": null,
+        "aspect_ratio": 0.0,
+        "base_anisotropy": 0.0,
+        "base_clearcoat": 0.0,
+        "base_clearcoat_roughness": 0.0,
+        "base_color": [
+          0.7372549176216125,
+          0.7411764860153198,
+          0.13333334028720856,
+          0.699999988079071
+        ],
+        "base_metallic": 0.0,
+        "base_reflectance": 0.5,
+        "base_roughness": 1.0,
+        "clearcoat_img": null,
+        "clearcoat_roughness_img": null,
+        "emissive_color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "generic_imgs": {},
+        "generic_params": {},
+        "gradient": null,
+        "ground_plane_axis": 0.0,
+        "has_alpha": true,
+        "line_width": 1.0,
+        "metallic_img": null,
+        "normal_img": null,
+        "point_size": 3.0,
+        "reflectance_img": null,
+        "roughness_img": null,
+        "sRGB_color": false,
+        "scalar_max": 1.0,
+        "scalar_min": 0.0,
+        "shader": "defaultLitTransparency",
+        "thickness": 1.0,
+        "transmission": 1.0
+      },
+      "radius": 4.0
+    },
+    "P4": {
+      "name": "P4",
+      "geometry": "butcher_2a_x0310/pocket_P4.ply",
+      "material": {
+        "absorption_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "absorption_distance": 1.0,
+        "albedo_img": null,
+        "anisotropy_img": null,
+        "ao_img": null,
+        "ao_rough_metal_img": null,
+        "aspect_ratio": 0.0,
+        "base_anisotropy": 0.0,
+        "base_clearcoat": 0.0,
+        "base_clearcoat_roughness": 0.0,
+        "base_color": [
+          0.09019608050584793,
+          0.7450980544090271,
+          0.8117647171020508,
+          0.699999988079071
+        ],
+        "base_metallic": 0.0,
+        "base_reflectance": 0.5,
+        "base_roughness": 1.0,
+        "clearcoat_img": null,
+        "clearcoat_roughness_img": null,
+        "emissive_color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "generic_imgs": {},
+        "generic_params": {},
+        "gradient": null,
+        "ground_plane_axis": 0.0,
+        "has_alpha": true,
+        "line_width": 1.0,
+        "metallic_img": null,
+        "normal_img": null,
+        "point_size": 3.0,
+        "reflectance_img": null,
+        "roughness_img": null,
+        "sRGB_color": false,
+        "scalar_max": 1.0,
+        "scalar_min": 0.0,
+        "shader": "defaultLitTransparency",
+        "thickness": 1.0,
+        "transmission": 1.0
+      },
+      "radius": 5.0
+    },
+    "P5": {
+      "name": "P5",
+      "geometry": "butcher_2a_x0310/pocket_P5.ply",
+      "material": {
+        "absorption_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "absorption_distance": 1.0,
+        "albedo_img": null,
+        "anisotropy_img": null,
+        "ao_img": null,
+        "ao_rough_metal_img": null,
+        "aspect_ratio": 0.0,
+        "base_anisotropy": 0.0,
+        "base_clearcoat": 0.0,
+        "base_clearcoat_roughness": 0.0,
+        "base_color": [
+          0.49803921580314636,
+          0.49803921580314636,
+          0.49803921580314636,
+          0.699999988079071
+        ],
+        "base_metallic": 0.0,
+        "base_reflectance": 0.5,
+        "base_roughness": 1.0,
+        "clearcoat_img": null,
+        "clearcoat_roughness_img": null,
+        "emissive_color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "generic_imgs": {},
+        "generic_params": {},
+        "gradient": null,
+        "ground_plane_axis": 0.0,
+        "has_alpha": true,
+        "line_width": 1.0,
+        "metallic_img": null,
+        "normal_img": null,
+        "point_size": 3.0,
+        "reflectance_img": null,
+        "roughness_img": null,
+        "sRGB_color": false,
+        "scalar_max": 1.0,
+        "scalar_min": 0.0,
+        "shader": "defaultLitTransparency",
+        "thickness": 1.0,
+        "transmission": 1.0
+      },
+      "radius": 4.0
+    },
+    "P6": {
+      "name": "P6",
+      "geometry": "butcher_2a_x0310/pocket_P6.ply",
+      "material": {
+        "absorption_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "absorption_distance": 1.0,
+        "albedo_img": null,
+        "anisotropy_img": null,
+        "ao_img": null,
+        "ao_rough_metal_img": null,
+        "aspect_ratio": 0.0,
+        "base_anisotropy": 0.0,
+        "base_clearcoat": 0.0,
+        "base_clearcoat_roughness": 0.0,
+        "base_color": [
+          1.0,
+          0.49803921580314636,
+          0.054901961237192154,
+          0.699999988079071
+        ],
+        "base_metallic": 0.0,
+        "base_reflectance": 0.5,
+        "base_roughness": 1.0,
+        "clearcoat_img": null,
+        "clearcoat_roughness_img": null,
+        "emissive_color": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "generic_imgs": {},
+        "generic_params": {},
+        "gradient": null,
+        "ground_plane_axis": 0.0,
+        "has_alpha": true,
+        "line_width": 1.0,
+        "metallic_img": null,
+        "normal_img": null,
+        "point_size": 3.0,
+        "reflectance_img": null,
+        "roughness_img": null,
+        "sRGB_color": false,
+        "scalar_max": 1.0,
+        "scalar_min": 0.0,
+        "shader": "defaultLitTransparency",
+        "thickness": 1.0,
+        "transmission": 1.0
+      },
+      "radius": 4.0
+    }
+  },
+  "_pocket_clip": true
+}
