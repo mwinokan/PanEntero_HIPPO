@@ -1,0 +1,198 @@
+x0310_0A-x0556_0A_229_B1X_rgrp-4
+     RDKit          3D
+
+ 15 15  0  0  0  0  0  0  0  0999 V2000
+   28.7115   15.8377    8.1816 N   0  0  0  0  0  0  0  0  0  0  0  0
+   28.5454   14.6948    8.1429 C   0  0  0  0  0  0  0  0  0  0  0  0
+   28.4330   13.2456    8.1042 C   0  0  0  0  0  0  0  0  0  0  0  0
+   29.5700   12.6409    7.3273 C   0  0  0  0  0  0  0  0  0  0  0  0
+   29.8006   13.0523    6.1940 O   0  0  0  0  0  0  0  0  0  0  0  0
+   30.2885   11.6340    7.9567 N   0  0  0  0  0  0  0  0  0  0  0  0
+   31.3216   10.9672    7.2629 C   0  0  0  0  0  0  0  0  0  0  0  0
+   32.1148   11.8219    6.5147 C   0  0  0  0  0  0  0  0  0  0  0  0
+   33.1590   11.3350    5.7489 C   0  0  0  0  0  0  0  0  0  0  0  0
+   33.4047    9.9882    5.7353 C   0  0  0  0  0  0  0  0  0  0  0  0
+   34.5472    9.5323    4.8646 C   0  0  0  0  0  0  0  0  0  0  0  0
+   34.4773    8.3219    4.2400 N   0  0  0  0  0  0  0  0  0  0  0  0
+   35.5325   10.2311    4.6693 O   0  0  0  0  0  0  0  0  0  0  0  0
+   32.6630    9.1051    6.4612 N   0  0  0  0  0  0  0  0  0  0  0  0
+   31.6315    9.6087    7.2156 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  3  0
+  2  3  1  0
+  3  4  1  0
+  4  5  2  0
+  4  6  1  0
+  6  7  1  0
+  7  8  2  0
+  8  9  1  0
+  9 10  2  0
+ 10 11  1  0
+ 11 12  1  0
+ 11 13  2  0
+ 10 14  1  0
+ 14 15  2  0
+ 15  7  1  0
+A    1
+ N1 
+A    2
+ C1 
+A    3
+ C2 
+A    4
+ C3 
+A    5
+ O1 
+A    6
+ N2 
+A    7
+ C4 
+A    8
+ C5 
+A    9
+ C6 
+A   10
+ C7 
+A   11
+ C8 
+A   12
+ N3 
+A   13
+ O2 
+A   14
+ N4 
+A   15
+ C9 
+M  END
+>  <similarity>  (1) 
+1.0
+
+>  <smiles>  (1) 
+N#CCC(=O)Nc1ccc(C(N)=O)nc1
+
+>  <cmpd_id>  (1) 
+ENAMINE:Z1688566756
+
+>  <used_subnode>  (1) 
+N#CCC(N)=O
+
+>  <used_synthon>  (1) 
+[Xe]c1cccnc1
+
+>  <ref_subnode>  (1) 
+N#CCC(N)=O
+
+>  <ref_synthon>  (1) 
+[Xe]n1cccn1
+
+>  <fragmentA>  (1) 
+x0310_0A
+
+>  <fragmentB>  (1) 
+x0556_0A
+
+>  <HA>  (1) 
+15
+
+>  <HBD>  (1) 
+2
+
+>  <HBA>  (1) 
+4
+
+>  <MW>  (1) 
+204.064725496
+
+>  <TPSA>  (1) 
+108.86999999999999
+
+>  <LogP>  (1) 
+0.03267999999999971
+
+>  <RBs>  (1) 
+3
+
+>  <G_bound>  (1) 
+-6.147988603887065
+
+>  <G_unbound>  (1) 
+0.49450099410474374
+
+>  <deltaG>  (1) 
+-6.642489597991808
+
+>  <comRMSD>  (1) 
+0.3791155970169532
+
+>  <substructure_overlap_check>  (1) 
+True
+
+>  <energy_ratio_check>  (1) 
+True
+
+>  <const_energy/unconst_energy>  (1) 
+2.8301086937488797
+
+>  <sucos>  (1) 
+0.5983238281374272
+
+>  <interactions>  (1) 
+Hydrophobic_PRO-107,Hydrophobic_HIS-21,HBDonor_SER-105,HBDonor_SER-125
+
+>  <total_num_ints>  (1) 
+4
+
+>  <total_num_ints_nonhyd>  (1) 
+2
+
+>  <num_uniq_frag_ints>  (1) 
+8
+
+>  <num_repl_uniq_ints>  (1) 
+4
+
+>  <num_uniq_ints_lost>  (1) 
+4
+
+>  <num_new_uniq_ints>  (1) 
+0
+
+>  <int_check>  (1) 
+True
+
+>  <prop_maintained_ints>  (1) 
+0.5
+
+>  <ref_url>  (1) 
+https://pubs.acs.org/doi/10.1021/acs.jcim.3c00276?fig=tgr1&ref=pdf
+
+>  <submitter_name>  (1) 
+Steph Wills
+
+>  <submitter_institution>  (1) 
+University of Oxford
+
+>  <submitter_email>  (1) 
+stephanie.wills@balliol.ox.ac.uk
+
+>  <generation_date>  (1) 
+2024-06-03
+
+>  <method>  (1) 
+FragNetv2
+
+>  <original SMILES>  (1) 
+N#CCC(=O)Nc1ccc(C(N)=O)nc1
+
+>  <original_name>  (1) 
+x0310_0A-x0556_0A_229_B1X_rgrp-4
+
+>  <ref_mols>  (1) 
+x0310_0A,x0556_0A
+
+>  <ref_pdb>  (1) 
+x0310_0A
+
+>  <rationale>  (1) 
+FragNet: 1 round bioisosteric merging incl N#CCC(N)=O and [Xe]c1cccnc1 replacing [Xe]n1cccn1
+
+$$$$
