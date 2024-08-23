@@ -8,21 +8,38 @@ import molparse as mp
 import os
 import json
 from tqdm import tqdm
+import time
 
 import logging
 logger = logging.getLogger('load_syndirella_outputs')
 
 os.system('cp -v 2a_hits.sqlite batch0.sqlite')
+# os.system('cp -v 2a_hits.sqlite batch0_base2.sqlite')
 # os.system('cp -v 2a_hits.sqlite full_batch0.sqlite')
 
 logger.debug(f'{hippo.__file__=}')
 
+# animal = hippo.HIPPO('PanEntero_HIPPO','batch0_base2.sqlite')
 animal = hippo.HIPPO('PanEntero_HIPPO','batch0.sqlite')
 
-inspiration_lookup = {
-	"A71EV2A-x0310_0A": "A71x0310a",
-	"A71EV2A-x0416_0A": "A71x0416a",
-}
+inspiration_poses = {}
+
+def get_inspiration(name):
+
+	global inspiration_poses
+
+	inspiration_lookup = {
+		"A71EV2A-x0310_0A": "A71x0310a",
+		"A71EV2A-x0416_0A": "A71x0416a",
+	}
+
+	pose_name = inspiration_lookup[name]
+
+	if pose_name not in inspiration_poses:
+		pose = animal.poses[pose_name]
+		inspiration_poses[pose_name] = pose.id
+
+	return inspiration_poses[pose_name]
 
 def main():
 	
@@ -53,6 +70,17 @@ def parse_syndirella_products_csv(df: pd.DataFrame,
 		pose_metadata: dict = {}
 
 		tags = []
+
+		if i%2500 == 0:
+			logger.debug(f'row {i=} {row.num_atom_diff=}')
+
+		# if i > 100:
+		# 	logger.debug(f'breaking @ row {i=} {row.num_atom_diff=}')
+		# 	break
+
+		if row.num_atom_diff > 15:
+			logger.warning(f'Breaking at row {i=}')
+			break
 		
 		if product_csv:
 
@@ -69,8 +97,8 @@ def parse_syndirella_products_csv(df: pd.DataFrame,
 					continue
 				
 			# inspiration
-			inspiration1: str = inspiration_lookup[eval(row.regarded)[0]]
-			inspiration2: str = inspiration_lookup[eval(row.regarded)[1]]
+			inspiration1: int = get_inspiration(eval(row.regarded)[0])
+			inspiration2: int = get_inspiration(eval(row.regarded)[1])
 			
 			# pose_path
 			name = row['name']
@@ -78,14 +106,12 @@ def parse_syndirella_products_csv(df: pd.DataFrame,
 
 		else:
 
-			logger.debug('not product_csv')
-			
 			inspiration1 = None
 			inspiration2 = None
 			pose_path = None
 
-		if i%5000 == 0:
-			logger.debug(f'row {i=}')
+		# print(row)
+		# raise Exception
 			
 		# register the reactants
 		reactant1 = animal.register_compound(smiles=row.r1_smiles, return_compound=False, commit=False)
@@ -104,50 +130,45 @@ def parse_syndirella_products_csv(df: pd.DataFrame,
 
 		split_pose = pose_name.split('-')
 		comp_name = '-'.join(split_pose[:-3]+[split_pose[-2]])
+
 		comp_metadata['syndirella_name'] = comp_name
-
-
-		product = animal.register_compound(smiles=product_smiles, return_compound=True, metadata=comp_metadata, commit=False)
-
-		animal.alias_dict[comp_name] = product.id
-
-		### CHANGE TO DIRECT DB MANIPULATION?
-
-		if 'base' in pose_name:
-			product.tags.add('base', commit=False)
-
-		elif 'base_compound' in row:
-			base = animal.alias_dict[row.base_compound]
-			product.set_base(base, commit=False)
-			product.tags.add('elab', commit=False)
-		
-		### END CHANGE
-		
-		# register the reaction
 		if 'flag' in row:
 			if not isinstance(row['flag'],float):
 				comp_metadata['flag'] = row.flag
 
+		### METADATA, POSE, AND REACTION REGISTRATION REQUIRE A COMPOUND OBJECT
+		product = animal.register_compound(smiles=product_smiles, return_compound=True, metadata=comp_metadata, commit=False)
+		product_id = product.id
+
+		animal.alias_dict[comp_name] = product_id
+
+		if 'base' in pose_name:
+			animal.db.insert_tag(name='base', compound=product_id, commit=False)
+			# product.tags.add('base', commit=False)
+
+		if product_csv:
+			# assert product_csv
+			base_id = animal.alias_dict[row.base_compound]
+			animal.db.update(table='compound', id=product_id, key='compound_base', value=base_id, commit=False)
+			animal.db.insert_tag(name='elab', compound=product_id, commit=False)
+			# product.tags.add('elab', commit=False)
+				
 		# register the reaction
 		reaction = animal.register_reaction(type=row.reaction, product=product, reactants=reactants, commit=False)
 
-		inspirations = []
-		
-		if inspiration1:
-			inspirations.append(animal.poses[inspiration1])
+		# register the pose and its inspirations
+		if pose_path:
 
-		if inspiration2:
-			inspirations.append(animal.poses[inspiration2])
+			inspirations = []
+			
+			if inspiration1:
+				inspirations.append(inspiration1)
 
-		if not pose_path:
-			print(row)
-			raise Exception
+			if inspiration2:
+				inspirations.append(inspiration2)
 
-		# register the pose
-		pose = animal.register_pose(compound=product, name='A', target='A71EV2A', path=pose_path, metadata=pose_metadata, inspirations=inspirations, commit=False)
-
-		# if i > 1000:
-		# 	break
+			pose = animal.register_pose(compound=product, target='A71EV2A', path=pose_path, 
+				metadata=pose_metadata, inspirations=inspirations, commit=False, return_pose=False, overwrite_metadata=True)
 
 	logger.title('committing...')
 	animal.db.commit()
@@ -167,13 +188,20 @@ def parse_syndirella_products_batch(path: str):
 
 	logger.var('#subdirectories to check', len(files))
 
+	before_compound_count = len(animal.compounds)
+	before_pose_count = len(animal.poses)
+	before_time = time.perf_counter()
+
 	# loop over subdirectories
 	for i,subdirectory in enumerate(files):
 		if not subdirectory.is_dir():
 			continue
 
-		# if i < 3:
+		# if i < 4:
 		# 	continue
+
+		if i > 0:
+			break
 		
 		logger.title(f'{subdirectory.name} #{i+1}/{len(files)}')
 
@@ -198,8 +226,10 @@ def parse_syndirella_products_batch(path: str):
 										   has_regarded, 
 										   base_output_dir)
 
-		if i > 1:
-			break
+	logger.success('batch loaded')
+	logger.var("#poses added", len(animal.poses) - before_pose_count)
+	logger.var("#compounds added", len(animal.compounds) - before_compound_count)
+	logger.var("execution time [s]", time.perf_counter() - before_time)
 
 	return
 
